@@ -18,13 +18,3 @@ spec:
         image: onsfadhel/khedmasite_nginx
         ports:
         - containerPort: 80
-        volumeMounts:
-        - name: nginx-config-volume
-          mountPath: /etc/nginx/conf.d
-      volumes:
-      - name: nginx-config-volume
-        configMap:
-          name: nginx-config
-          items:
-          - key: default.conf
-            path: default.conf
