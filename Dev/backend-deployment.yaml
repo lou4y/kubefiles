@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: backend
-        image: onsfadhel/khedmasite_django:latest
+        image: onsfadhel/khedmasite_django:django-66
         ports:
         - containerPort: 8000
