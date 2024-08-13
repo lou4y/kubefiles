@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: your-docker-hub/your-backend-image
+        ports:
+        - containerPort: 8000
+        volumeMounts:
+        - name: media-storage
+          mountPath: /django/khedma/media
+      volumes:
+      - name: media-storage
+        hostPath:
+          path: /mnt/data/dev-media
