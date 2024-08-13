@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: your-docker-hub/your-backend-image
+        image: onsfadhel/khedmasite_django
         ports:
         - containerPort: 8000
         volumeMounts:

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: your-docker-hub/your-nginx-image
+        image: onsfadhel/khedmasite_nginx
         ports:
         - containerPort: 80
         volumeMounts:
