@@ -27,4 +27,4 @@ spec:
       volumes:
       - name: postgres-storage
         persistentVolumeClaim:
-          claimName: dev-postgres-pvc
+          claimName: postgres-pvc  # Update this to match the PVC name
