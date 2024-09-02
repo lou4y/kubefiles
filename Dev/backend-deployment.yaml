@@ -18,3 +18,10 @@ spec:
         image: lou4y/backend:ef87e8b 
         ports:
         - containerPort: 8000
+      volumeMounts:
+        - name: media-volume
+          mountPath: /django/khedma/media
+      volumes:
+      - name: media-volume
+        persistentVolumeClaim:
+          claimName: backend-media-pvc

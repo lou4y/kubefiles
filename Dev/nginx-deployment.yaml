@@ -18,7 +18,7 @@ spec:
         image: lou4y/nginx:ef87e8b
         ports:
         - containerPort: 80
-        volumeMounts:
+      volumeMounts:
         - name: nginx-config
           mountPath: /etc/nginx/conf.d
         - name: media-volume
